@@ -23,231 +23,73 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
         backgroundColor: Colors.green,
         title: const Text(
           'Rishtey.com',
-          style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+          style: TextStyle(color: Colors.white, shadows: [
+            Shadow(
+              offset: Offset(2.0, 2.0),
+              blurRadius: 3.0,
+              color: Color.fromARGB(255, 0, 0, 0),
+            )
+          ]),
         ),
-      ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(13.0),
-              child: Text(
-                "POPULAR CATEGORIES",
-                style: TextStyle(
+        leading: Icon(Icons.menu),
+        //placing inbuilt icon on leading of appbar
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.contact_phone),
+            tooltip: 'Contact',
+            //using font awesome icon in action list of appbar
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.card_travel),
+
+            //cart+ icon from FontAwesome
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.person),
+            tooltip: 'User account',
+            //cart+ icon from FontAwesome
+          ),
+        ],
+      ), //set app bar
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(13.0),
+            child: Text(
+              "POPULAR CATEGORIES",
+              style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                ),
-              ),
+                  shadows: [
+                    Shadow(offset: Offset(1.0, 1.0), color: Colors.grey)
+                  ]),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 110,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
               children: [
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.amber,
-                        child: Icon(Icons.location_city),
-                        backgroundColor: Colors.yellow,
-                        elevation: 0,
-                        foregroundColor: Colors.black,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "City/Country",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
+                buttonscrol(),
+                buttonscrol(),
+                buttonscrol(),
+                buttonscrol(),
+                buttonscrol(),
+                buttonscrol(),
+                const SizedBox(
+                  width: 50,
                 ),
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.amber,
-                        child: Icon(Icons.brightness_3_rounded),
-                        backgroundColor: Colors.redAccent,
-                        elevation: 0,
-                        foregroundColor: Colors.black,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "Religion",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.redAccent,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
-                ),
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.grey,
-                        child: Icon(Icons.cases_outlined),
-                        backgroundColor: Colors.lime,
-                        elevation: 0,
-                        foregroundColor: Colors.black,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "Profession",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.lime,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
-                ),
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.yellow,
-                        child: Icon(Icons.people),
-                        backgroundColor: Colors.yellow,
-                        elevation: 0,
-                        foregroundColor: Colors.white,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "Caste",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
-                )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.grey,
-                        child: Icon(Icons.cases_outlined),
-                        backgroundColor: Colors.lime,
-                        elevation: 0,
-                        foregroundColor: Colors.black,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "Profession",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.lime,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
-                ),
-                Container(
-                  height: 100,
-                  width: 150,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FloatingActionButton(
-                        focusColor: Colors.yellow,
-                        child: Icon(Icons.people),
-                        backgroundColor: Colors.white,
-                        elevation: 0,
-                        foregroundColor: Colors.black,
-                        splashColor: Colors.grey,
-                        onPressed: () => {},
-                      ),
-                      Text(
-                        "Caste",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(4, 4),
-                        )
-                      ]),
-                )
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -275,4 +117,36 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
       ),
     );
   }
+
+  Widget buttonscrol() => Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 100,
+          ),
+          FloatingActionButton(
+            focusColor: Colors.yellow,
+            child: Icon(Icons.people),
+            backgroundColor: Colors.cyan,
+            elevation: 10,
+            foregroundColor: Colors.black,
+            splashColor: Colors.grey,
+            onPressed: () => {},
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
+            "Caste",
+            style: TextStyle(fontWeight: FontWeight.bold, shadows: [
+              Shadow(
+                offset: Offset(3.0, 3.0),
+                blurRadius: 3.0,
+                color: Color.fromARGB(90, 0, 0, 0),
+              )
+            ]),
+          ),
+        ],
+      );
 }
