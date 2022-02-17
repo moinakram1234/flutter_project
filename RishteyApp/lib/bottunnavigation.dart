@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class bottunnavigationristey extends StatefulWidget {
@@ -54,42 +56,222 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
           ),
         ],
       ), //set app bar
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(13.0),
-            child: Text(
-              "POPULAR CATEGORIES",
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  shadows: [
-                    Shadow(offset: Offset(1.0, 1.0), color: Colors.grey)
-                  ]),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 110,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                buttonscrol(),
-                buttonscrol(),
-                buttonscrol(),
-                buttonscrol(),
-                buttonscrol(),
-                buttonscrol(),
-                const SizedBox(
-                  width: 50,
+      body: Container(
+        child: Card(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(13.0),
+                child: Text(
+                  "POPULAR CATEGORIES",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(offset: Offset(1.0, 1.0), color: Colors.grey)
+                      ]),
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 110,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    buttonscrol(Icons.school, Colors.yellow, "Education"),
+                    buttonscrol(Icons.cases_rounded, Colors.red, "Profession"),
+                    buttonscrol(Icons.people, Colors.green, "Caste"),
+                    buttonscrol(
+                        Icons.location_city, Colors.blueGrey, "City/Country"),
+                    buttonscrol(Icons.list, Colors.teal, "Religion"),
+                    buttonscrol(Icons.list, Colors.teal, "Browse All"),
+                  ],
+                ),
+              ),
+              Container(
+                height: 2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.grey.shade200.withOpacity(0.9),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Container(
+                height: 70,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      child: const Center(
+                          child: Text(
+                        "Success Stories",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )),
+                      height: 50,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.grey.shade200.withOpacity(0.4)),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 50,
+                      width: 150,
+                      child: const Center(
+                          child: Text(
+                        "Active Users",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.grey.shade200.withOpacity(0.4),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 50,
+                      width: 150,
+                      child: const Center(
+                          child: Text(
+                        "Packages",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.shade200.withOpacity(0.4),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 50,
+                      width: 150,
+                      child: const Center(
+                          child: Text(
+                        "About us",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.grey.shade200.withOpacity(0.4),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text("Top Suggestions for You"),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    height: 150,
+                    width: 320,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(70),
+                          ),
+                          side: BorderSide(
+                              width: 5, color: Colors.grey.shade200)),
+                      elevation: 40,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Icon(
+                                Icons.school,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Master"),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Icon(
+                                Icons.cases_rounded,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Software Engineer"),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Icon(Icons.people),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Bhatti"),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              //religion details
+                              Icon(Icons.brightness_3_sharp),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Muslim"),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Icon(
+                                Icons.location_city,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Islamabad"),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
-        ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -118,34 +300,24 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
     );
   }
 
-  Widget buttonscrol() => Column(
+  Widget buttonscrol(IconData next, MaterialColor clr, String s) => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(
-            width: 100,
+          const SizedBox(
+            width: 80,
           ),
           FloatingActionButton(
-            focusColor: Colors.yellow,
-            child: Icon(Icons.people),
-            backgroundColor: Colors.cyan,
-            elevation: 10,
+            child: Icon(next),
+            backgroundColor: clr.shade500,
             foregroundColor: Colors.black,
-            splashColor: Colors.grey,
             onPressed: () => {},
           ),
           const SizedBox(
             height: 10,
           ),
-          const Text(
-            "Caste",
-            style: TextStyle(fontWeight: FontWeight.bold, shadows: [
-              Shadow(
-                offset: Offset(3.0, 3.0),
-                blurRadius: 3.0,
-                color: Color.fromARGB(90, 0, 0, 0),
-              )
-            ]),
+          Text(
+            s,
           ),
         ],
       );
