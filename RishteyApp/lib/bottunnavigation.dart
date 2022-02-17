@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Userproposal.dart';
 
 class bottunnavigationristey extends StatefulWidget {
   bottunnavigationristey({Key? key}) : super(key: key);
@@ -180,95 +181,7 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    height: 150,
-                    width: 320,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(70),
-                          ),
-                          side: BorderSide(
-                              width: 5, color: Colors.grey.shade200)),
-                      elevation: 40,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.school,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Master"),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.cases_rounded,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Software Engineer"),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(Icons.people),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Bhatti"),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              //religion details
-                              Icon(Icons.brightness_3_sharp),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Muslim"),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.location_city,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Islamabad"),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              )
+              userproposal(),
             ],
           ),
         ),
@@ -282,6 +195,10 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
             label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.wysiwyg),
+            label: 'Proposal',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
