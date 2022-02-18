@@ -8,22 +8,29 @@ class userproposal extends StatefulWidget {
 }
 
 class _userproposalState extends State<userproposal> {
+  var _addcard = 1;
+  void _incrementcard() {
+    setState(() {
+      _addcard++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 160,
-      child: ListView(
-        scrollDirection: Axis.vertical,
-        children: [
-          userdetails(),
-          userdetails(),
-          userdetails(),
-          userdetails(),
-          userdetails(),
-          userdetails(),
-        ],
-      ),
-    );
+    return GestureDetector(
+        onTap: () {
+          _incrementcard();
+        },
+        child: Container(
+          height: 200,
+          child: ListView.separated(
+            itemBuilder: (context, index) => userdetails(),
+            separatorBuilder: (context, _) => SizedBox(
+              height: 1,
+            ),
+            itemCount: _addcard,
+          ),
+        ));
   }
 }
 
@@ -40,14 +47,14 @@ class userdetails extends StatelessWidget {
           width: 20,
         ),
         Container(
-          height: 170,
+          height: 200,
           width: 320,
           child: Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     topRight: Radius.circular(20))),
-            elevation: 40,
+            elevation: 20,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -117,7 +124,7 @@ class userdetails extends StatelessWidget {
                 ),
                 Container(
                   color: Colors.grey,
-                  height: 2,
+                  height: 0.5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

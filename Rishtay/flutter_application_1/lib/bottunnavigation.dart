@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Userproposal.dart';
 
@@ -23,16 +21,10 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.grey.shade900,
         title: const Text(
           'Rishtey.com',
-          style: TextStyle(color: Colors.white, shadows: [
-            Shadow(
-              offset: Offset(2.0, 2.0),
-              blurRadius: 3.0,
-              color: Color.fromARGB(255, 0, 0, 0),
-            )
-          ]),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: Icon(Icons.menu),
         //placing inbuilt icon on leading of appbar
@@ -58,6 +50,7 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
         ],
       ), //set app bar
       body: Container(
+        height: MediaQuery.of(context).size.height,
         child: Card(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,9 +62,7 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(offset: Offset(1.0, 1.0), color: Colors.grey)
-                      ]),
+                      shadows: [Shadow(color: Colors.grey)]),
                 ),
               ),
               const SizedBox(
@@ -87,7 +78,8 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
                     buttonscrol(Icons.people, Colors.green, "Caste"),
                     buttonscrol(
                         Icons.location_city, Colors.blueGrey, "City/Country"),
-                    buttonscrol(Icons.list, Colors.teal, "Religion"),
+                    buttonscrol(
+                        Icons.brightness_3_sharp, Colors.teal, "Religion"),
                     buttonscrol(Icons.list, Colors.teal, "Browse All"),
                   ],
                 ),
@@ -177,7 +169,11 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
               SizedBox(
                 height: 10,
               ),
-              Text("Top Suggestions for You"),
+              Text("Top Suggestions for You",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  )),
               const SizedBox(
                 height: 20,
               ),
@@ -227,7 +223,7 @@ class _bottunnavigationristeyState extends State<bottunnavigationristey> {
           FloatingActionButton(
             child: Icon(next),
             backgroundColor: clr.shade500,
-            foregroundColor: Colors.black,
+            foregroundColor: Colors.white,
             onPressed: () => {},
           ),
           const SizedBox(
