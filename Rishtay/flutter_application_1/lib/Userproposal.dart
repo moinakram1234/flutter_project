@@ -22,7 +22,7 @@ class _userproposalState extends State<userproposal> {
           _incrementcard();
         },
         child: Container(
-          height: 200,
+          height: 173,
           child: ListView.separated(
             itemBuilder: (context, index) => userdetails(),
             separatorBuilder: (context, _) => SizedBox(
@@ -47,7 +47,7 @@ class userdetails extends StatelessWidget {
           width: 20,
         ),
         Container(
-          height: 200,
+          height: 170,
           width: 320,
           child: Card(
             shape: RoundedRectangleBorder(
