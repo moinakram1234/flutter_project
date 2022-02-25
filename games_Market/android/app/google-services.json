@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "696218954517",
+    "project_id": "game-a85a5",
+    "storage_bucket": "game-a85a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696218954517:android:ac18240373a63633a4971c",
+        "android_client_info": {
+          "package_name": "com.example.games_market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696218954517-paeco44ir3c7juvpqlg0df9rt77bllgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjsDeyPokeuKT8ZjtGOR9rV5cjKipy80M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696218954517-paeco44ir3c7juvpqlg0df9rt77bllgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
